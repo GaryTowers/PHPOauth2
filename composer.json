@@ -1,5 +1,13 @@
 {
+    "name": "gary/oauth2",
+    "description": "Simple oauth2 server implementation in PHP",
     "require": {
         "bshaffer/oauth2-server-php": "~1.7"
-    }
+    },
+    "authors": [
+        {
+            "name": "Gary Torres",
+            "email": "gtorres@applaudostudios.com"
+        }
+    ]
 }
