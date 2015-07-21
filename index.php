@@ -35,7 +35,7 @@ $app->get('/treasure/', $validateToken(), function() use($app){
 		'last_name' => 'Smith',
 		'phone' => '555-555-555',
 		'email' => 'email@domain.com',
-		'bank_account': '888444555222332444487886655'
+		'bank_account'=> '888444555222332444487886655'
 	);
 
 	echo json_encode($me);
@@ -83,7 +83,8 @@ $app->post('/auth/', function() use($server, $app){
 		);
 
 		//Post to  token endpoint to forward flow and return JSON on a single call
-		$url = 'http://localhost:81/apps/Oauth2/index.php/token';
+		$location = $app->request->getHostWithPort();
+		$url = "http://$location/apps/Oauth2/index.php/token";
 		$auth = base64_encode('TestApp:testpass');
 		$options = array(
 				'http' => array(
