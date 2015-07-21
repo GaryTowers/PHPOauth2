@@ -19,6 +19,7 @@ Parameters:
   * response_type : **code**
   * client_id: **TestApp**
   * state: **xyz**
+  
 ***Example:*** [get] /auth?response_type=code&client_id=TestApp&state=xyz
 
 **[GET]** **/treasure**
